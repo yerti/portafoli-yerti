@@ -54,7 +54,7 @@ const NavigationBar: React.FC<Props> = ({ menu }) => {
         </ul>
       </div>
 
-      <div>
+      <div className={styles.contentMenu}>
         <Image
           onClick={hanldeOpenMenuResponsive}
           width={32}

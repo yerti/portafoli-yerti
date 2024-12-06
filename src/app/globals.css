@@ -2,7 +2,6 @@
 
 :root {
   --white: #ffffff;
-  --foreground: #171717;
   --lead: #383838;
   --lead-two: #eaeaea;
   --lead-trhee: #f4f4f4;
@@ -19,4 +18,5 @@
 body {
   font-family: var(--font-family-text);
   color: var(--lead);
+  overflow: hidden;
 }

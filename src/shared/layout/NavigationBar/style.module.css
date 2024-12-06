@@ -13,7 +13,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 90%;
-  margin-top: 3rem;
 }
 .contentIcon {
   margin-top: 1rem;
@@ -129,6 +128,9 @@
 }
 .contenMenuResponsive li:last-child {
   border: none !important;
+}
+.contentMenu {
+  display: none;
 }
 @media (max-width: 769px) {
   .navigationContainer {

@@ -1,0 +1,108 @@
+.buttonRoute {
+  position: relative;
+  background-color: var(--white);
+  padding: 0.8rem 1rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--pink-one);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.buttonRoute:hover {
+  background-color: var(--pink-one);
+  color: var(--white);
+}
+
+.buttonRoute span,
+.secondary span {
+  margin-left: 0.5rem;
+}
+
+.buttonRoute::before,
+.secondary::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0) scale(1);
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transform-origin: right bottom;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+}
+.buttonRoute::after,
+.secondary::after {
+  content: '';
+  display: block;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  z-index: 2;
+  pointer-events: none;
+  border: 2px solid var(--pink-one);
+  position: absolute;
+  opacity: 0.15;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out,
+    -webkit-clip-path 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
+  transition: clip-path 0.2s ease-in-out, transform 0.2s ease-in-out,
+    opacity 0.2s ease-in-out, -webkit-clip-path 0.2s ease-in-out;
+  transform-origin: center;
+  -webkit-clip-path: polygon(
+    100% 0,
+    100% calc(100% - 0px),
+    calc(100% - 0px) 100%,
+    0 100%,
+    0 0
+  );
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - 0px),
+    calc(100% - 0px) 100%,
+    0 100%,
+    0 0
+  );
+  transform: translate3d(0, 0, 0);
+  border-radius: calc(var(--grimlock-button-border-radius) / 2);
+}
+.buttonRoute:hover::before,
+.secondary:hover::before {
+  transform: translate3d(0, 0, 0) scale(1.5);
+}
+.buttonRoute:hover::after,
+.secondary:hover::after {
+  clip-path: polygon(
+    100% 0,
+    100% calc(100% - 25px),
+    calc(100% - 25px) 100%,
+    0 100%,
+    0 0
+  );
+}
+
+.secondary {
+  position: relative;
+  background-color: var(--red-one);
+  padding: 1rem 2rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.secondary:hover {
+  background-color: var(--red-two);
+}
